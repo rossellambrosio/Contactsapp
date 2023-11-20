@@ -19,7 +19,7 @@ struct ContactView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .padding(.top, 100.0)
-                    .frame(width: 360, height: 360)
+                    .frame(width: 400, height: 400)
                 
                 HStack{
                     Text(contact?.name ?? "Name").font(.title)
@@ -32,49 +32,49 @@ struct ContactView: View {
                 HStack{
                     ZStack{
                         RoundedRectangle(cornerRadius: 12)
-                            .frame(width:80, height: 60)
+                            .frame(width:90, height: 60)
                             .foregroundStyle(.gray)
                         VStack{
                             Image(systemName: "message.fill")
-                                .font(.title)
+                                .font(.title2)
                             
-                            Text("message").font(.subheadline)
+                            Text("message").font(.caption)
                             
                         }.foregroundStyle(.white)
                     }
                     ZStack{
                         RoundedRectangle(cornerRadius: 12)
-                            .frame(width:80, height: 60)
+                            .frame(width:90, height: 60)
                             .foregroundStyle(.gray)
                         VStack{
                             Image(systemName: "phone.fill")
-                                .font(.title)
+                                .font(.title2)
                             
-                            Text("iPhone").font(.subheadline)
+                            Text("iPhone").font(.caption)
                             
                         }.foregroundStyle(.white)
                     }
                     ZStack{
                         RoundedRectangle(cornerRadius: 12)
-                            .frame(width:80, height: 60)
+                            .frame(width:90, height: 60)
                             .foregroundStyle(.gray)
                         VStack{
                             Image(systemName: "video.fill")
-                                .font(.title)
+                                .font(.title2)
                             
-                            Text("FaceTime").font(.subheadline)
+                            Text("FaceTime").font(.caption)
                             
                         }.foregroundStyle(.white)
                     }
                     ZStack{
                         RoundedRectangle(cornerRadius: 12)
-                            .frame(width:80, height: 60)
+                            .frame(width:90, height: 60)
                             .foregroundStyle(.gray)
                         VStack{
                             Image(systemName: "envelope.fill")
-                                .font(.title)
+                                .font(.title2)
                             
-                            Text("mail").font(.subheadline).foregroundStyle(.white)
+                            Text("mail").font(.caption).foregroundStyle(.white)
                             
                         }.foregroundStyle(.white)
                     }
@@ -100,7 +100,8 @@ struct ContactView: View {
             // Button(action: signIn) {
             //   Text("Sign In")
             //  }
-        }  .background(Color.blue.opacity(0.4))
+        }   .background(LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.5), Color.white]), startPoint: .top, endPoint: .bottom)) // Imposta lo sfondo con un gradiente
+        
               .edgesIgnoringSafeArea(.all)
     }
 }
