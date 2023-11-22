@@ -9,8 +9,9 @@ import SwiftUI
 
 
 struct ContactView: View {
-    
-    var contact: Contact?
+    @Environment(\.modelContext) private var modelContext
+    @Environment(\.dismiss) var dismiss
+    @State var contact: Contact?
     
     var body: some View {
         VStack{
@@ -20,15 +21,15 @@ struct ContactView: View {
                     .aspectRatio(contentMode: .fit)
                     .padding(.top, 100.0)
                     .frame(width: 400, height: 400)
-                
+                    .accessibilityHidden(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
                 HStack{
-                    Text(contact?.name ?? "Name").font(.title)
-                    Text(contact?.surname ?? "Surname").font(.title)
+                    Text(contact?.name ?? "name").font(.title)
+                    Text(contact?.surname ?? "surname").font(.title)
                 }
             }
             
             Section{
-                //copia da qua per i buttons
+               
                 HStack{
                     ZStack{
                         RoundedRectangle(cornerRadius: 12)
@@ -80,44 +81,67 @@ struct ContactView: View {
                     }
                 }
                 
-            } //fino a qua per i buttons
-            //                Form{
-            
-            //                }
+            } 
             List{
                 Section{
                     VStack{
-                        Text("phone number")
+                        HStack{
+                            Text("phone number")
+                            Spacer()
+                        }
                         
-                        Text (contact?.phoneNumber ?? "")
-                        // Text("contact.phoneNumber")
-                    }}
-                Section{
-                    VStack{
-                        Text("email")
+                        HStack{
                             
-                            Text (contact?.email ?? "")
-                        
-            }
-                }
-                Section{
-                    VStack{
-                        Text("company")
-                        
-                        Text (contact?.company ?? "")
+                            Text (contact?.phoneNumber ?? "")
+                            // Text("contact.phoneNumber")
+                            Spacer()
+                        }
                     }
                 }
                 
+                Section{
+                    VStack{
+                        HStack{
+                            Text("email")
+                            Spacer()
+                        }
+                        HStack{
+                            Text (contact?.email ?? "")
+                            Spacer()
+                        }
+                    }
+                }
+            
+                Section{
+                    VStack{
+                        HStack{
+                            Text("company")
+                                Spacer()
+                        }
+                        HStack{
+                            Text (contact?.company ?? "")
+                            Spacer()
+                        }
             }
-            // Button(action: signIn) {
-            //   Text("Sign In")
-            //  }
+                }
+                
+                Button(role: .destructive, action: {
+                    modelContext.delete(contact!)
+                    dismiss()
+                }, label: {
+                    Text("Delete contact")
+                })
+            }
+            
         }   .background(LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.5), Color.white]), startPoint: .top, endPoint: .bottom)) // Imposta lo sfondo con un gradiente
         
               .edgesIgnoringSafeArea(.all)
+    
     }
 }
 
 #Preview {
-    ContactView()
+    ContactView(
+        //contact: Contact(name: "Giorgio", surname: "asas", phoneNumber: "21941939131", company: "casd", email: "ababaabba@gmail.com")
+    )
 }

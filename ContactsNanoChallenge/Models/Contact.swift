@@ -19,14 +19,14 @@ final class Contact: Identifiable {
     var name: String
     var surname: String
     var phoneNumber: String
-    var company: String?
-    var email: String?
+    var company: String
+    var email: String
    
 //    static func == (lhs: Contact, rhs: Contact) -> Bool {
 //        return (lhs.surname, lhs.name) < (rhs.surname, rhs.name)
     //trova modo di fare un model
     
-    init(name: String, surname: String, phoneNumber: String, company: String) {
+    init(name: String, surname: String, phoneNumber: String, company: String, email: String) {
         self.id = UUID().uuidString
         self.name = name
         self.surname = surname
@@ -38,6 +38,8 @@ final class Contact: Identifiable {
    
     
 }
+
+
 
 
 

@@ -15,12 +15,14 @@ struct CardView: View {
                     .resizable()
                     .frame(width: 75.0, height: 75.0)
                     .clipShape(Circle())
+                    .accessibilityHidden(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
                 
                 VStack(alignment: .leading) {
                     Text("Rossella Ambrosio")
                         .font(.title2)
                         .fontWeight(.semibold)
                         .bold()
+                        
                     Text("My Card")
                         .fontWeight(.regular)
                         .foregroundColor(Color(red: 0.357, green: 0.357, blue: 0.357))
