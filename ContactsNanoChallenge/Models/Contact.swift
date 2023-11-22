@@ -26,13 +26,13 @@ final class Contact: Identifiable {
 //        return (lhs.surname, lhs.name) < (rhs.surname, rhs.name)
     //trova modo di fare un model
     
-    init(name: String, surname: String, phoneNumber: String) {
+    init(name: String, surname: String, phoneNumber: String, company: String) {
         self.id = UUID().uuidString
         self.name = name
         self.surname = surname
-        self.phoneNumber = ""
-        self.company = ""
-        self.email = ""
+        self.phoneNumber = phoneNumber
+        self.company = company
+        self.email = email
         
     }
    

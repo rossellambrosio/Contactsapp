@@ -77,10 +77,12 @@ struct AddContactView: View {
         }
     }
     func addContact(){
-        let item = Contact(name: name, surname: surname, phoneNumber: phoneNumber)
+        let item = Contact(name: name, surname: surname, phoneNumber: phoneNumber, company: company)
         item.name = name
         item.surname = surname
         item.phoneNumber = phoneNumber
+        item.company = company
+      
        
         modelContext.insert(item)
         try? modelContext.save()

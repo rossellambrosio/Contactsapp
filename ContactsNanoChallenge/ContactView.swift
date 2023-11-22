@@ -85,15 +85,27 @@ struct ContactView: View {
             
             //                }
             List{
-                Section(header: Text("phone number")){
-                    
-                    Text (contact?.phoneNumber ?? "phone number")
-                    // Text("contact.phoneNumber")
+                Section{
+                    VStack{
+                        Text("phone number")
+                        
+                        Text (contact?.phoneNumber ?? "")
+                        // Text("contact.phoneNumber")
+                    }}
+                Section{
+                    VStack{
+                        Text("email")
+                            
+                            Text (contact?.email ?? "")
+                        
+            }
                 }
-                Section(header: Text("email")){
-                    
-                    Text (contact?.email ?? "email")
-                    
+                Section{
+                    VStack{
+                        Text("company")
+                        
+                        Text (contact?.company ?? "")
+                    }
                 }
                 
             }
