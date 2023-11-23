@@ -14,22 +14,26 @@ struct ContactView: View {
     @State var contact: Contact?
     
     var body: some View {
-        VStack{
-            Section {
-                Image("user")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .padding(.top, 100.0)
-                    .frame(width: 400, height: 400)
-                    .accessibilityHidden(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
-                HStack{
-                    Text(contact?.name ?? "name").font(.title)
-                    Text(contact?.surname ?? "surname").font(.title)
+       
+            
+            VStack{
+                
+                Section {
+                    Image("user")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .padding(.top, 100.0)
+                        .frame(width: 400, height: 400)
+                        .accessibilityHidden(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+                    HStack{
+                        Text(contact?.name ?? "name").font(.title)
+                        Text(contact?.surname ?? "surname").font(.title)
+                    }
                 }
-            }
+            
             
             Section{
-               
+                
                 HStack{
                     ZStack{
                         RoundedRectangle(cornerRadius: 12)
@@ -81,8 +85,9 @@ struct ContactView: View {
                     }
                 }
                 
-            } 
-            List{
+                
+            }
+      List{
                 Section{
                     VStack{
                         HStack{
@@ -111,18 +116,18 @@ struct ContactView: View {
                         }
                     }
                 }
-            
+                
                 Section{
                     VStack{
                         HStack{
                             Text("company")
-                                Spacer()
+                            Spacer()
                         }
                         HStack{
                             Text (contact?.company ?? "")
                             Spacer()
                         }
-            }
+                    }
                 }
                 
                 Button(role: .destructive, action: {
@@ -135,10 +140,10 @@ struct ContactView: View {
             
         }   .background(LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.5), Color.white]), startPoint: .top, endPoint: .bottom)) // Imposta lo sfondo con un gradiente
         
-              .edgesIgnoringSafeArea(.all)
-    
+            .edgesIgnoringSafeArea(.all)
     }
-}
+  }
+
 
 #Preview {
     ContactView(
