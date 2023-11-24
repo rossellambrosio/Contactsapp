@@ -11,7 +11,7 @@ struct CardView: View {
     var body: some View {
         VStack {
             HStack {
-                Image("ross1")
+                Image("rosa")
                     .resizable()
                     .frame(width: 75.0, height: 75.0)
                     .clipShape(Circle())
