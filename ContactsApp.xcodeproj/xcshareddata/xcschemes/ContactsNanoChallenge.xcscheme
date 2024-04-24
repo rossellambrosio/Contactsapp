@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BE0E7A962B037D2C008E5944"
-               BuildableName = "ContactsNanoChallenge.app"
-               BlueprintName = "ContactsNanoChallenge"
-               ReferencedContainer = "container:ContactsNanoChallenge.xcodeproj">
+               BuildableName = "ContactsApp.app"
+               BlueprintName = "ContactsApp"
+               ReferencedContainer = "container:ContactsApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,9 +35,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BE0E7AA62B037D34008E5944"
-               BuildableName = "ContactsNanoChallengeTests.xctest"
-               BlueprintName = "ContactsNanoChallengeTests"
-               ReferencedContainer = "container:ContactsNanoChallenge.xcodeproj">
+               BuildableName = "ContactsAppTests.xctest"
+               BlueprintName = "ContactsAppTests"
+               ReferencedContainer = "container:ContactsApp.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -46,9 +46,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BE0E7AB02B037D34008E5944"
-               BuildableName = "ContactsNanoChallengeUITests.xctest"
-               BlueprintName = "ContactsNanoChallengeUITests"
-               ReferencedContainer = "container:ContactsNanoChallenge.xcodeproj">
+               BuildableName = "ContactsAppUITests.xctest"
+               BlueprintName = "ContactsAppUITests"
+               ReferencedContainer = "container:ContactsApp.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -68,9 +68,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BE0E7A962B037D2C008E5944"
-            BuildableName = "ContactsNanoChallenge.app"
-            BlueprintName = "ContactsNanoChallenge"
-            ReferencedContainer = "container:ContactsNanoChallenge.xcodeproj">
+            BuildableName = "ContactsApp.app"
+            BlueprintName = "ContactsApp"
+            ReferencedContainer = "container:ContactsApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -85,9 +85,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BE0E7A962B037D2C008E5944"
-            BuildableName = "ContactsNanoChallenge.app"
-            BlueprintName = "ContactsNanoChallenge"
-            ReferencedContainer = "container:ContactsNanoChallenge.xcodeproj">
+            BuildableName = "ContactsApp.app"
+            BlueprintName = "ContactsApp"
+            ReferencedContainer = "container:ContactsApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
