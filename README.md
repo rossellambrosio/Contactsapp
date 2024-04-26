@@ -6,7 +6,15 @@ Add Contacts: Easily add new contacts with their details such as name, phone num
 Delete Contacts: Remove unwanted contacts effortlessly with just a few taps.
 Data Persistence: Utilizing SwiftData, contacts are securely stored locally on the device.
 User-friendly Interface: The app offers an intuitive interface designed with SwiftUI for smooth navigation and interaction.
+
+
+
+
 ![cont](https://github.com/rossellambrosio/Contactsapp/assets/148210734/17dde967-3ebb-49a2-a635-900428e277db)
+
+
+
+
 
 # Installation
 To install the Contacts App on your iOS device:
