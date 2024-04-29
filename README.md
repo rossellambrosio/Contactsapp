@@ -1,5 +1,5 @@
 # Contacts app
-# Overview
+
 The Contacts application is designed to manage contacts efficiently on your device. Built using SwiftUI and SwiftData for data persistence, it offers a seamless experience for adding, storing and deleting contacts.
 # Features
 Add Contacts: Easily add new contacts with their details such as name, phone number, email, and more.
